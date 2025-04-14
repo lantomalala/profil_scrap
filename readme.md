@@ -16,6 +16,6 @@ Une API Node.js permettant de scraper les informations publiques d’un profil F
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/ton-utilisateur/profil-scrap.git
+git clone https://github.com/lantomalala/profil_scrap.git
 cd profil-scrap
 npm install
