@@ -3,12 +3,18 @@ const router = express.Router();
 const axios = require('axios');
 const { JSDOM } = require('jsdom');
 
+// Insertion Proxy
+//const HttpsProxyAgent = require('https-proxy-agent');
+//const proxyAgent = new HttpsProxyAgent('http://ton_username:ton_password@proxy.webshare.io:12345');
 const getHTML = async (url) => {
     try {
         let response = await axios.get(url, {
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
             }
+            
+            // httpsAgent: proxyAgent,
+            // proxy: true
         });
         return response.data;
     } catch (error) {

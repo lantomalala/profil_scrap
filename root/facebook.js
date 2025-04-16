@@ -2,6 +2,9 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const { JSDOM } = require('jsdom');
+// Insertion Proxy
+//const HttpsProxyAgent = require('https-proxy-agent');
+//const proxyAgent = new HttpsProxyAgent('/mon_api_scrap/id');
 
 const getHTML = async (url) => {
     try {
@@ -9,6 +12,8 @@ const getHTML = async (url) => {
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
             }
+            // httpsAgent: proxyAgent,
+            // proxy: true
         });
         return response.data;
     } catch (error) {
